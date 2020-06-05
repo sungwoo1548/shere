@@ -14,3 +14,6 @@ web-build/
 
 # google config
 google-services.json
+
+# bulid file
+build
