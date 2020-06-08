@@ -32,6 +32,7 @@
       "package": "com.kickthebook.android.shere",
       "versionCode": 1,
       "googleServicesFile": "./google-services.json"
-    }
+    },
+    "description": ""
   }
 }
