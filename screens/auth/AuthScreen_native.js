@@ -40,6 +40,8 @@ const AuthScreen = () => {
 
     const signOutAsync = async () => {
         await GoogleSignIn.signOutAsync();
+        const googleProfileData = await firebase.auth().signOut();
+        setProfile(googleProfileData);
         setUser(null);
     };
 
@@ -88,9 +90,11 @@ const AuthScreen = () => {
                         <Text>{`lastName : ${user.lastName}`}</Text>
                         <Text>{`auth.idToken : ${user.auth.idToken}`}</Text>
                         <Text>{JSON.stringify(user)}</Text>
-                        <Text>{'프로파일 : '}{JSON.stringify(profile)}</Text>
                     </View>
                 }
+                <View>
+                    <Text>{'프로파일 : '}{JSON.stringify(profile)}</Text>
+                </View>
             </ScrollView>
         </View >
     )
