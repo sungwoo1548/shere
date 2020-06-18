@@ -31,7 +31,10 @@
     "android": {
       "package": "com.kickthebook.android.shere",
       "versionCode": 1,
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3248621936757805~9131927679"
+      }
     },
     "description": ""
   }
