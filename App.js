@@ -26,8 +26,8 @@ const firebaseConfig = {
 export default function App(props) {
   const isLoadingComplete = useCachedResources();
   useEffect(() => {
-    firebase.initializeApp(firebaseConfig);
-  }, [])
+    isLoadingComplete && firebase.initializeApp(firebaseConfig);
+  }, [isLoadingComplete])
 
   if (!isLoadingComplete) {
     return null;
